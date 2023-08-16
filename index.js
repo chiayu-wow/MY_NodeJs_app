@@ -4,11 +4,6 @@ const mongoose = require('mongoose');
 
 //import routes.js
 const routes = require('./routes/routes');
-//import models.js
-const Model = require('../models/model');
-
-
-
 
 //import the contents of our .env file in the script file
 require('dotenv').config();
