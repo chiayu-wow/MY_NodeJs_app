@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 //import routes.js
 const routes = require('./routes/routes');
+const path = require('path');
 
 //import the contents of our .env file in the script file
 require('dotenv').config();
@@ -35,6 +36,11 @@ app.use('/api', routes);
 
 //define the base endpoint
 app.use('/api', routes)
-app.get('/', (req, res) => res.send('Hello World!'))
+
+app.get('/', (req, res) =>
+res.sendFile(path.join(__dirname+'/views/index.html'))
+//__dirname : It will resolve to your project folder.));
+)
+
 app.listen(3000, () => console.log('Server ready'))
 
