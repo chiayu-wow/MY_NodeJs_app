@@ -14,3 +14,6 @@
 
 ## bin
 這是在剛剛的package.json的"scripts"段有提到，它的目的是存放專案啟動指令，包括一些啟動設定。
+
+## dockerfile
+建立image的file
