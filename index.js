@@ -42,5 +42,5 @@ res.sendFile(path.join(__dirname+'/views/index.html'))
 //__dirname : It will resolve to your project folder.));
 )
 
-app.listen(3000, () => console.log('Server ready'))
+app.listen(3000, "0.0.0.0", () => console.log('Server ready'))
 

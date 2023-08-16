@@ -1,0 +1,18 @@
+#  Base Image
+FROM node:slim
+
+# Setting up the work directory
+WORKDIR /my_nodejs_app
+
+# Copying all the files in our project
+COPY . .
+
+# Installing dependencies
+RUN npm install
+
+# Starting our application
+CMD [ "npm", "start" ]
+
+# Exposing server port
+## 要跟index.js裏面連線的port一樣 ex: 3000:3000
+EXPOSE 3000
