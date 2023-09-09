@@ -33,12 +33,22 @@ app.use(express.json());
 ////routes路由对象中的路由都会匹配到"/api"路由后面
 app.use('/api', routes);
 
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
+
+
 
 //define the base endpoint
 app.use('/api', routes)
 
 app.get('/', (req, res) =>
 res.sendFile(path.join(__dirname+'/views/index.html'))
+//__dirname : It will resolve to your project folder.));
+)
+
+app.get('/login', (req, res) =>
+res.sendFile(path.join(__dirname+'/views/login.html'))
 //__dirname : It will resolve to your project folder.));
 )
 
