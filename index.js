@@ -52,5 +52,10 @@ res.sendFile(path.join(__dirname+'/views/login.html'))
 //__dirname : It will resolve to your project folder.));
 )
 
+app.get('/create', (req, res) =>
+res.sendFile(path.join(__dirname+'/views/create.html'))
+//__dirname : It will resolve to your project folder.));
+)
+
 app.listen(3000, "0.0.0.0", () => console.log('Server ready'))
 
